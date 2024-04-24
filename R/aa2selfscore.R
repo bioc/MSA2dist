@@ -9,7 +9,7 @@
 #' @importFrom stringr word
 #' @importFrom utils data
 #' @seealso \code{\link[Biostrings]{XStringSet-class}},
-#' \code{\link[Biostrings]{substitution.matrices}}
+#' \code{\link[pwalign]{substitution_matrices}}
 #' @examples
 #' data(woodmouse, package="ape")
 #' #cds2aa(dnabin2dnastring(woodmouse), shorten=TRUE,
@@ -40,34 +40,34 @@ aa2selfscore <- function(aa, scorematrix="BLOSUM62"){
     PAM70<-NULL
     PAM120<-NULL
     PAM250<-NULL
-    if(scorematrix == "BLOSUM45"){utils::data(BLOSUM45, package="Biostrings",
+    if(scorematrix == "BLOSUM45"){utils::data(BLOSUM45, package="pwalign",
         envir=environment())
         score.matrix <- BLOSUM45}
-    if(scorematrix == "BLOSUM50"){utils::data(BLOSUM50, package="Biostrings",
+    if(scorematrix == "BLOSUM50"){utils::data(BLOSUM50, package="pwalign",
         envir=environment())
         score.matrix <- BLOSUM50}
-    if(scorematrix == "BLOSUM62"){utils::data(BLOSUM62, package="Biostrings",
+    if(scorematrix == "BLOSUM62"){utils::data(BLOSUM62, package="pwalign",
         envir=environment())
         score.matrix <- BLOSUM62}
-    if(scorematrix == "BLOSUM80"){utils::data(BLOSUM80, package="Biostrings",
+    if(scorematrix == "BLOSUM80"){utils::data(BLOSUM80, package="pwalign",
         envir=environment())
         score.matrix <- BLOSUM80}
-    if(scorematrix == "BLOSUM100"){utils::data(BLOSUM100, package="Biostrings",
+    if(scorematrix == "BLOSUM100"){utils::data(BLOSUM100, package="pwalign",
         envir=environment())
         score.matrix <- BLOSUM100}
-    if(scorematrix == "PAM30"){utils::data(PAM30, package="Biostrings",
+    if(scorematrix == "PAM30"){utils::data(PAM30, package="pwalign",
         envir=environment())
         score.matrix <- PAM30}
-    if(scorematrix == "PAM40"){utils::data(PAM40, package="Biostrings",
+    if(scorematrix == "PAM40"){utils::data(PAM40, package="pwalign",
         envir=environment())
         score.matrix <- PAM40}
-    if(scorematrix == "PAM70"){utils::data(PAM70, package="Biostrings",
+    if(scorematrix == "PAM70"){utils::data(PAM70, package="pwalign",
         envir=environment())
         score.matrix <- PAM70}
-    if(scorematrix == "PAM120"){utils::data(PAM120, package="Biostrings",
+    if(scorematrix == "PAM120"){utils::data(PAM120, package="pwalign",
         envir=environment())
         score.matrix <- PAM120}
-    if(scorematrix == "PAM250"){utils::data(PAM250, package="Biostrings",
+    if(scorematrix == "PAM250"){utils::data(PAM250, package="pwalign",
         envir=environment())
         score.matrix <- PAM250}
     aa_selfscore_list <- lapply(aa, function(x) {

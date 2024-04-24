@@ -26,7 +26,7 @@ genetic.code=Biostrings::getGeneticCode("2")) |> aa2selfscore()
 }
 \seealso{
 \code{\link[Biostrings]{XStringSet-class}},
-\code{\link[Biostrings]{substitution.matrices}}
+\code{\link[pwalign]{substitution_matrices}}
 }
 \author{
 Kristian K Ullrich
