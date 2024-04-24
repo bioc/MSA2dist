@@ -5,14 +5,14 @@
 \title{cds2codonaln}
 \usage{
 cds2codonaln(
-    cds1,
-    cds2,
-    type = "global",
-    substitutionMatrix = "BLOSUM62",
-    gapOpening = 10,
-    gapExtension = 0.5,
-    remove.gaps = FALSE,
-    ...
+  cds1,
+  cds2,
+  type = "global",
+  substitutionMatrix = "BLOSUM62",
+  gapOpening = 10,
+  gapExtension = 0.5,
+  remove.gaps = FALSE,
+  ...
 )
 }
 \arguments{
@@ -23,17 +23,17 @@ cds2codonaln(
 [mandatory]}
 
 \item{type}{type of alignment (see
-\code{\link[Biostrings]{pairwiseAlignment}}) [default: global]}
+\code{\link[pwalign]{pairwiseAlignment}}) [default: global]}
 
 \item{substitutionMatrix}{substitution matrix representing the fixed
 substitution scores for an alignment (see
-\code{\link[Biostrings]{pairwiseAlignment}}) [default: BLOSUM62]}
+\code{\link[pwalign]{pairwiseAlignment}}) [default: BLOSUM62]}
 
 \item{gapOpening}{the cost for opening a gap in the alignment (see
-\code{\link[Biostrings]{pairwiseAlignment}}) [default: 10]}
+\code{\link[pwalign]{pairwiseAlignment}}) [default: 10]}
 
 \item{gapExtension}{the incremental cost incurred along the length of the
-gap in the alignment (see \code{\link[Biostrings]{pairwiseAlignment}})
+gap in the alignment (see \code{\link[pwalign]{pairwiseAlignment}})
 [default: 0.5]}
 
 \item{remove.gaps}{specify if gaps in the codon alignment should be removed
@@ -60,7 +60,7 @@ Pagès, H et al. (2014) Biostrings: Efficient manipulation of
 biological strings. \emph{R package version}, \bold{2(0)}.
 }
 \seealso{
-\code{\link[Biostrings]{pairwiseAlignment}}
+\code{\link[pwalign]{pairwiseAlignment}}
 }
 \author{
 Kristian K Ullrich

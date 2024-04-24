@@ -28,7 +28,7 @@ cds <- Biostrings::DNAStringSet(c("ATGCAACATTGC", "ATGCATTGC"))
 names(cds) <- c("cds1", "cds2")
 ## get protein alignment
 aa <- MSA2dist::cds2aa(cds)
-msa <- makePostalignedSeqs(Biostrings::pairwiseAlignment(aa[1], aa[2]))[[1L]]
+msa <- makePostalignedSeqs(pwalign::pairwiseAlignment(aa[1], aa[2]))[[1L]]
 names(msa) <- names(aa)
 ## get codon alignment
 nal <- MSA2dist::pal2nal(pal=msa, nal=cds)
@@ -39,7 +39,7 @@ Pagès, H et al. (2014) Biostrings: Efficient manipulation of
 biological strings. \emph{R package version}, \bold{2(0)}.
 }
 \seealso{
-\code{\link[Biostrings]{pairwiseAlignment}}
+\code{\link[pwalign]{pairwiseAlignment}}
 }
 \author{
 Kristian K Ullrich

@@ -25,7 +25,6 @@
 #' @importFrom methods is slot
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
 #' @importFrom seqinr kaks
 #' @importFrom parallel makeForkCluster stopCluster
 #' @importFrom doParallel registerDoParallel

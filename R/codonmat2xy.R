@@ -20,7 +20,6 @@
 #' \code{CumSumIndelMean} cumulative indels per codon\cr
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
 #' @importFrom seqinr kaks
 #' @importFrom tidyr %>% unite
 #' @importFrom tibble add_column

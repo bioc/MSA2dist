@@ -15,7 +15,6 @@
 #' @importFrom methods is slot
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
 #' @importFrom IRanges IRanges IRangesList reduce start end findOverlaps
 #' disjoin overlapsRanges
 #' @seealso \code{\link[MSA2dist]{dnastring2dist}}

@@ -25,7 +25,6 @@
 #' \code{dnds} sequence2 name\cr
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
 #' @importFrom seqinr kaks
 #' @importFrom stats setNames
 #' @seealso \code{\link[seqinr]{kaks}}

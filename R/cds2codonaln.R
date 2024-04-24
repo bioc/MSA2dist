@@ -8,14 +8,14 @@
 #' @param cds2 single sequence \code{DNAStringSet} or \code{DNAString}
 #' [mandatory]
 #' @param type type of alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: global]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: global]
 #' @param substitutionMatrix substitution matrix representing the fixed
 #' substitution scores for an alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: BLOSUM62]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: BLOSUM62]
 #' @param gapOpening the cost for opening a gap in the alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: 10]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: 10]
 #' @param gapExtension the incremental cost incurred along the length of the
-#' gap in the alignment (see \code{\link[Biostrings]{pairwiseAlignment}})
+#' gap in the alignment (see \code{\link[pwalign]{pairwiseAlignment}})
 #' [default: 0.5]
 #' @param remove.gaps specify if gaps in the codon alignment should be removed
 #' [default: FALSE]
@@ -23,11 +23,11 @@
 #' @return codon alignment as \code{DNAStringSet}
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
+#' @importFrom pwalign pairwiseAlignment
 #' @importFrom methods is slot
 #' @references Pagès, H et al. (2014) Biostrings: Efficient manipulation of
 #' biological strings. \emph{R package version}, \bold{2(0)}.
-#' @seealso \code{\link[Biostrings]{pairwiseAlignment}}
+#' @seealso \code{\link[pwalign]{pairwiseAlignment}}
 #' @examples
 #' ## define two cds sequences
 #' cds1 <- Biostrings::DNAString("ATGCAACATTGC")
@@ -69,7 +69,7 @@ cds2codonaln <- function(cds1, cds2, type="global",
         y.name <- names(cds2)
         cds2 <- MSA2dist::cds2aa(cds2, return.cds=TRUE, ...)[[1]]
     }
-    xy.aln <- makePostalignedSeqs(Biostrings::pairwiseAlignment(x.aa, y.aa,
+    xy.aln <- makePostalignedSeqs(pwalign::pairwiseAlignment(x.aa, y.aa,
         type=type, substitutionMatrix=substitutionMatrix, gapOpening=gapOpening,
         gapExtension=gapExtension))[[1L]]
     names(xy.aln) <- c(x.name, y.name)

@@ -6,25 +6,25 @@
 #' @param cds two sequences \code{DNAStringSet} [mandatory]
 #' @param aa two sequences \code{AAStringSet} [mandatory]
 #' @param type type of alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: global]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: global]
 #' @param substitutionMatrix substitution matrix representing the fixed
 #' substitution scores for an alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: BLOSUM62]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: BLOSUM62]
 #' @param gapOpening the cost for opening a gap in the alignment (see
-#' \code{\link[Biostrings]{pairwiseAlignment}}) [default: 10]
+#' \code{\link[pwalign]{pairwiseAlignment}}) [default: 10]
 #' @param gapExtension the incremental cost incurred along the length of the
-#' gap in the alignment (see \code{\link[Biostrings]{pairwiseAlignment}})
+#' gap in the alignment (see \code{\link[pwalign]{pairwiseAlignment}})
 #' [default: 0.5]
 #' @param remove.gaps specify if gaps in the codon alignment should be removed
 #' [default: FALSE]
 #' @return codon alignment as \code{DNAStringSet}
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
+#' @importFrom pwalign pairwiseAlignment
 #' @importFrom methods is slot
 #' @references Pagès, H et al. (2014) Biostrings: Efficient manipulation of
 #' biological strings. \emph{R package version}, \bold{2(0)}.
-#' @seealso \code{\link[Biostrings]{pairwiseAlignment}}
+#' @seealso \code{\link[pwalign]{pairwiseAlignment}}
 #' @examples
 #' ## define two cds sequences
 #' cds <- Biostrings::DNAStringSet(c("ATGCAACATTGC", "ATGCATTGC"))
@@ -50,7 +50,7 @@ cdsstring2codonaln <- function(cds, aa, type="global",
         stopifnot("Error: aa needs to only contain two sequences"=
             length(aa) == 2)
     }
-    xy.aln <- makePostalignedSeqs(Biostrings::pairwiseAlignment(aa[1], aa[2],
+    xy.aln <- makePostalignedSeqs(pwalign::pairwiseAlignment(aa[1], aa[2],
         type=type, substitutionMatrix=substitutionMatrix, gapOpening=gapOpening,
         gapExtension=gapExtension))[[1L]]
     names(xy.aln) <- names(aa)

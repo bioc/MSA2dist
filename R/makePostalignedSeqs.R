@@ -4,17 +4,17 @@
 #' \code{Biostrings}
 #' @param x x
 #' @return get internal function makePostalignedSeqs
-#' @seealso \code{\link[Biostrings]{pairwiseAlignment}},
+#' @seealso \code{\link[pwalign]{pairwiseAlignment}},
 #' \link[MSA2dist]{cds2codonaln}
 #' @examples
 #' ## define two cds sequences
 #' cds1 <- Biostrings::DNAString("ATGCAACATTGC")
 #' cds2 <- Biostrings::DNAString("ATGCATTGC")
-#' makePostalignedSeqs(Biostrings::pairwiseAlignment(
+#' makePostalignedSeqs(pwalign::pairwiseAlignment(
 #'     cds2aa(Biostrings::DNAStringSet(cds1)),
 #'     cds2aa(Biostrings::DNAStringSet(cds2))))
 #' @export makePostalignedSeqs
 #' @author Kristian K Ullrich
 
 makePostalignedSeqs <- get('.makePostalignedSeqs',
-    envir=asNamespace('Biostrings'), inherits=FALSE)
+    envir=asNamespace('pwalign'), inherits=FALSE)

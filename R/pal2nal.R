@@ -10,18 +10,18 @@
 #' @return codon alignment as \code{DNAStringSet}
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
+#' @importFrom pwalign pairwiseAlignment
 #' @importFrom methods is slot
 #' @references Pagès, H et al. (2014) Biostrings: Efficient manipulation of
 #' biological strings. \emph{R package version}, \bold{2(0)}.
-#' @seealso \code{\link[Biostrings]{pairwiseAlignment}}
+#' @seealso \code{\link[pwalign]{pairwiseAlignment}}
 #' @examples
 #' ## define two cds sequences
 #' cds <- Biostrings::DNAStringSet(c("ATGCAACATTGC", "ATGCATTGC"))
 #' names(cds) <- c("cds1", "cds2")
 #' ## get protein alignment
 #' aa <- MSA2dist::cds2aa(cds)
-#' msa <- makePostalignedSeqs(Biostrings::pairwiseAlignment(aa[1], aa[2]))[[1L]]
+#' msa <- makePostalignedSeqs(pwalign::pairwiseAlignment(aa[1], aa[2]))[[1L]]
 #' names(msa) <- names(aa)
 #' ## get codon alignment
 #' nal <- MSA2dist::pal2nal(pal=msa, nal=cds)

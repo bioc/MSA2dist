@@ -7,7 +7,6 @@
 #' @return vector of syn and non-syn sites
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
-#' pairwiseAlignment
 #' @importFrom seqinr kaks
 #' @seealso \code{\link[seqinr]{kaks}}
 #' @references Nei and Gojobori. (1986) Simple methods for estimating the

@@ -41,10 +41,8 @@ rcpp_KaKs <- function(cdsstr, sgc = "1", method = "YN", verbose = FALSE) {
 #' rcpp_distSTRING(dnavector=as.character(hiv), scoreMatrix=iupacMatrix())
 #' @export rcpp_distSTRING
 #' @author Kristian K Ullrich
-rcpp_distSTRING <- function(dnavector, scoreMatrix,
-    ncores = 1L, symmetric = 1L) {
-    .Call(`_MSA2dist_rcpp_distSTRING`, dnavector, scoreMatrix,
-    ncores, symmetric)
+rcpp_distSTRING <- function(dnavector, scoreMatrix, ncores = 1L, symmetric = 1L) {
+    .Call(`_MSA2dist_rcpp_distSTRING`, dnavector, scoreMatrix, ncores, symmetric)
 }
 
 #' @useDynLib MSA2dist, .registration = TRUE

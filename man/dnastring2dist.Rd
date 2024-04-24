@@ -5,14 +5,14 @@
 \title{dnastring2dist}
 \usage{
 dnastring2dist(
-    dna,
-    model = "IUPAC",
-    threads = 1,
-    symmetric = TRUE,
-    score = NULL,
-    mask = NULL,
-    region = NULL,
-    ...
+  dna,
+  model = "IUPAC",
+  threads = 1,
+  symmetric = TRUE,
+  score = NULL,
+  mask = NULL,
+  region = NULL,
+  ...
 )
 }
 \arguments{
