@@ -59,7 +59,8 @@ pal2nal <- function(pal,
                 if(gap_pos==1){
                     n_i <- paste0(n_i, gap)
                 } else {
-                    n_i_codons_to_add <- gap_pos-n_i_codons_added-1
+                    n_i_codons_to_add <- gap_pos-n_i_codons_added-
+                        gap_len_cumsum+gap_len-1
                     n_i<- paste0(n_i, substr(nal_i,
                         (n_i_codons_added*3)+1,
                         (n_i_codons_added+n_i_codons_to_add)*3))
