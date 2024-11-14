@@ -40,7 +40,7 @@ cdsstring2codonaln <- function(cds, aa, type="global",
     remove.gaps=FALSE){
     stopifnot("Error: cds needs to be DNAStringSet"=
         {methods::is(cds, "DNAStringSet")})
-    stopifnot("Error: aa needs to be either AAStringSet"=
+    stopifnot("Error: aa needs to be an AAStringSet"=
         {methods::is(aa, "AAStringSet")})
     if(methods::is(cds, "DNAStringSet")){
         stopifnot("Error: cds needs to only contain two sequences"=

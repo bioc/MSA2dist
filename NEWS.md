@@ -1,3 +1,14 @@
+# MSA2dist 1.11.1 (2024-11-14)
+
+BUG FIXES
+
+* fixed pal2nal
+* fixed aastring2aabin to return alignment
+
+NEW FEATURES
+
+* added globalDeletionAA
+
 # MSA2dist 1.7.5 (2024-03-28)
 
 BUG FIXES

@@ -1,12 +1,13 @@
 #' @title aastring2aabin
 #' @name aastring2aabin
-#' @description This function converts a \code{AAStringSet} into an \code{ape}
-#' \code{DNAbin}.
+#' @description This function converts an \code{AAStringSet}
+#' into an \code{ape} \code{AAbin}.
 #' @param aa \code{AAStringSet} [mandatory]
-#' @return An object of class \code{DNAbin}
+#' @return An object of class \code{AAbin}
 #' @importFrom methods is slot
 #' @importFrom Biostrings DNAString DNAStringSet AAString AAStringSet
 #' readDNAStringSet readAAStringSet writeXStringSet width subseq
+#' AAMultipleAlignment
 #' @importFrom ape as.AAbin
 #' @seealso \code{\link[seqinr]{as.alignment}}
 #' \code{\link[ape]{as.DNAbin.alignment}}
@@ -25,5 +26,5 @@
 aastring2aabin <- function(aa){
     stopifnot("Error: input needs to be an AAStringSet"=
                 methods::is(aa, "AAStringSet"))
-    return(ape::as.AAbin(aa))
+    return(ape::as.AAbin(Biostrings::AAMultipleAlignment(aa)))
 }

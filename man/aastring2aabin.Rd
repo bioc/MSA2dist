@@ -10,11 +10,11 @@ aastring2aabin(aa)
 \item{aa}{\code{AAStringSet} [mandatory]}
 }
 \value{
-An object of class \code{DNAbin}
+An object of class \code{AAbin}
 }
 \description{
-This function converts a \code{AAStringSet} into an \code{ape}
-\code{DNAbin}.
+This function converts an \code{AAStringSet} into an \code{ape}
+\code{AAbin}.
 }
 \examples{
 ## define two cds sequences
