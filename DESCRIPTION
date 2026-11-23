@@ -3,7 +3,7 @@ Type: Package
 Title: MSA2dist calculates pairwise distances for DNAStringSet/AAStringSet
     using custom scoring, conducts codon analyses (including dNdS), and
     estimates Dxy/FST
-Version: 1.18.0
+Version: 1.19.0
 Authors@R: 
     person(given = "Kristian K",
            family = "Ullrich",
